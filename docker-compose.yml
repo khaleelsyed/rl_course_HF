@@ -1,0 +1,27 @@
+version: "3.6"
+
+services:
+  app:
+    image: khaleels/pytorch:0.2.0
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USER: lab_rat
+    volumes:
+      - ./data/:/app/data/
+      - ./notebooks/:/app/notebooks/
+      - ./scripts/:/app/scripts/
+      - ./src:/app/src/
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+              driver: nvidia
+    ports:
+      - $JP_LOCAL_PORT:8888
+    environment:
+      - JP_AUTHENTICATED=$JP_AUTHENTICATED
+    tty: true
+    entrypoint: /app/scripts/docker-entrypoint.sh
