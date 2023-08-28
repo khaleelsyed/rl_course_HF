@@ -1,9 +1,10 @@
 FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-runtime
 
 ARG USER
+ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
-RUN apt install -y git
+RUN apt install -y git ffmpeg xvfb
 
 RUN pip install --upgrade pip
 

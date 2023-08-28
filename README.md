@@ -1,6 +1,6 @@
-# Jupyter template
+# Reinforment Learning Course lab
 
-Simple setup for projects that require a Dockerised JupyterLab setup with pytorch and CUDA.
+Setup used to house lab environment for the Hugging Face [Deep RL course](https://huggingface.co/learn/deep-rl-course).
 
 ## Usage
 
