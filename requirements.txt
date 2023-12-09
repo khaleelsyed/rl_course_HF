@@ -6,6 +6,7 @@ scipy==1.11.2
 huggingface-hub==0.16.4
 transformers==4.32.0
 gymnasium[atari]==0.29.1
+gymnasium[accept-rom-license]==0.29.1
 pygame==2.5.1
 pyyaml==6.0.1
 imageio==2.31.2
@@ -16,3 +17,11 @@ pyvirtualdisplay==3.0
 PyOpenGL==3.1.7
 PyOpenGL_accelerate==3.1.7
 ipywidgets==8.1.0
+rl_zoo3
+opencv-python
+moviepy
+git+https://github.com/ntasfi/PyGame-Learning-Environment.git
+git+https://github.com/simoninithomas/gym-games
+huggingface_hub
+imageio-ffmpeg
+pyyaml==6.0
